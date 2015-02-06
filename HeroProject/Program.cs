@@ -15,11 +15,13 @@ namespace HeroProject
         
         static void Main(string[] args)
         {
-           Hero main = new Hero();
+           /*Hero main = new Hero();
            main.everything("");
            main.show();
            main.fight();
-           Console.ReadKey();
+           Console.ReadKey();*/
+           SuperHero newmain = new SuperHero();
+           newmain.showPowers();
 
         }
     }

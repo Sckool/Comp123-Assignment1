@@ -12,7 +12,7 @@ namespace HeroProject
         private int speed;
         private int strength;
         private int health;
-        private int currentHealth =100;
+      
 
         // Public Properties
         public string name;
