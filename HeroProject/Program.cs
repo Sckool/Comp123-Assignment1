@@ -15,7 +15,7 @@ namespace HeroProject
         
         static void Main(string[] args)
         { 
-          
+          //calls all the method from class Hero and SuperHero
            SuperHero newmain = new SuperHero();
            newmain.everything("");
            newmain.SuperHeroCon("");

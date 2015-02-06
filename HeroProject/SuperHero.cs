@@ -24,7 +24,6 @@ namespace HeroProject
              // Literal Notation or Array Initializer 
 
             string[] tempArray = new string[originalArray.Length];    
-
             Random rnd = new Random();
             int randomElement;
 
@@ -79,10 +78,8 @@ namespace HeroProject
             Console.WriteLine("+++++++++++++++++++++++++++++");
             Console.ReadKey();
 
-
-
         }
-
+        //gnerate random num
         private static int generateRandomElement(Random rnd, int max)
         {
             int number;
