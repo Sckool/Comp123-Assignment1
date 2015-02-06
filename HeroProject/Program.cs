@@ -14,14 +14,16 @@ namespace HeroProject
     {
         
         static void Main(string[] args)
-        {
-           /*Hero main = new Hero();
-           main.everything("");
-           main.show();
-           main.fight();
-           Console.ReadKey();*/
+        { 
+          
            SuperHero newmain = new SuperHero();
-           newmain.showPowers();
+           newmain.everything("");
+           newmain.SuperHeroCon("");
+           newmain.showPowers();    
+           newmain.show();
+           newmain.fight();
+           Console.ReadKey();
+          
 
         }
     }

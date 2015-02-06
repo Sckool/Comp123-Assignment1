@@ -6,36 +6,33 @@ using System.Threading.Tasks;
 
 namespace HeroProject
 {
-    class SuperHero
+    class SuperHero : Hero
     {
-        public SuperHero()
+        //Constructor
+        public void SuperHeroCon(string name) 
         {
-           
+            this.name = name;
+            generateRandomPowers();
         }
+        //Private properties
         private string[] originalArray = { "Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "Weather Control" };
         private string[] finalArray = new string[3]; // constructor Notation
         
+        //method to genetare random powers
         private void generateRandomPowers()
         {
              // Literal Notation or Array Initializer 
 
-            string[] tempArray = new string[originalArray.Length];
-
-
-            
+            string[] tempArray = new string[originalArray.Length];    
 
             Random rnd = new Random();
-
             int randomElement;
-
 
             // Copy each element of the originalArray to tempArray
             for (int element = 0; element < originalArray.Length; element++)
             {
                 tempArray[element] = originalArray[element];
             }
-
-
 
             // Assign cells from one array to another
 
@@ -53,42 +50,13 @@ namespace HeroProject
 
                     index++;
                 }
-
-
             }
-
-
-
-            /* Alternate Looping Structure
-            for (int index = 0; index < finalArray.Length; index++)
-            {
-                
-                randomElement = generateRandomElement(rnd);
-                if (originalArray[randomElement] != "unavailable")
-                {
-                    finalArray[index] = originalArray[randomElement];
-                    originalArray[randomElement] = "unavailable";
-                } 
-            }
-             */
-
-
-
-            /* Alternate way to declare and initialize an array
-            string[] originalArray = new string[6];
-            originalArray[0] = "Honda";
-            originalArray[1] = "BMW";
-            originalArray[2] = "Mercedes";
-            originalArray[3] = "Jeep";
-            originalArray[4] = "Ford";
-            originalArray[5] = "Jaguar";
-            */
         }
             public void showPowers()
             {
             Console.WriteLine("++++++++++++++++++++++++++++++");
             Console.WriteLine("+  Original SuperPower  List +");
-            Console.WriteLine("++++++++++++++++++++++++");
+            Console.WriteLine("++++++++++++++++++++++++++++++");
 
             // Output the value of the each cell in each array
             for (int index = 0; index < this.originalArray.Length; index++)
@@ -106,8 +74,9 @@ namespace HeroProject
                 Console.WriteLine(finalArray[index]);
             }
             Console.WriteLine();
-            Console.WriteLine("+++++++++++++++++++++++++");
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("+++++++++++++++++++++++++++++");
+            Console.WriteLine("Press Enter");
+            Console.WriteLine("+++++++++++++++++++++++++++++");
             Console.ReadKey();
 
 
@@ -118,7 +87,6 @@ namespace HeroProject
         {
             int number;
             number = rnd.Next(max);
-            //Console.WriteLine("My Random car is {0}", number); // Debugging line
             return number;
         }
 

@@ -21,7 +21,7 @@ namespace HeroProject
         public void everything(string name)
         {
             this.name = name;
-            Console.WriteLine("Hero");
+            Console.WriteLine("SuperHero Class");
             generateAbilities(this.speed, this.strength, this.health);
         }
        
@@ -49,14 +49,14 @@ namespace HeroProject
                 {
                     attempt = true;
                     hitDamage();
-                    Console.WriteLine("Hit: {0}", hitDamage());// desplays the damage when hit
+                    Console.WriteLine("#### You have Hit the enemy for : {0} Hit Points ####", hitDamage());// desplays the damage when hit
                     hitDamage();
                    
                 }
                 else// if false nothing happens
                 {
                     attempt = false;
-                    Console.WriteLine("Miss");//desplays the damage when miss
+                    Console.WriteLine("#### Your Attack has Missed ####");//desplays the damage when miss
                 
                 }               
             
@@ -77,10 +77,15 @@ namespace HeroProject
         // Desplays the stats for my Hero charecter
         public void show()
        {
-           Console.WriteLine("Strength {0}", this.strength);
-           Console.WriteLine("Health {0}", this.health);
-           Console.WriteLine("Speed {0}", this.speed);
-           Console.WriteLine();
+           Console.WriteLine("Your Stats are:");
+           Console.WriteLine("----------------------------");
+           Console.WriteLine("Strength: {0}", this.strength);
+           Console.WriteLine("Health: {0}", this.health);
+           Console.WriteLine("Speed: {0}", this.speed);
+           Console.WriteLine("----------------------------");
+           Console.WriteLine("--Press Enter To attack a Enemy--");
+           Console.ReadKey();
+           Console.WriteLine("");
        }
         //This method calls the hitAttempt
         public void fight()
